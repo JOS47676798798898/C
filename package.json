@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "rm -rf out && next build && firebase deploy"
+    "lint": "next lint"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
@@ -42,5 +41,8 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
