@@ -1,0 +1,10 @@
+model User {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  licenseKey     String
+  licenseType    String
+  expirationDate DateTime
+  isBlocked      Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+} 
