@@ -14,6 +14,7 @@ import pptxgen from 'pptxgenjs'
 import JSZip from 'jszip/dist/jszip.min.js'
 import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithPopup, GoogleAuthProvider, User } from 'firebase/auth'
+import Image from 'next/image'
 
 interface Word {
   word: string
@@ -451,7 +452,6 @@ export default function CrosswordGenerator() {
     const { width, height } = selectedFileSize
     const scaledWidth = width * RESOLUTION_SCALE
     const scaledHeight = height * RESOLUTION_SCALE
-    const aspectRatio = scaledWidth / scaledHeight
     const maxGridSize = Math.min(scaledWidth, scaledHeight) * 0.8
     const cellSize = maxGridSize / Math.max(puzzleWidth, puzzleHeight)
     const gridWidth = puzzleWidth * cellSize

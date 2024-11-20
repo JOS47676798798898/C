@@ -1,4 +1,4 @@
-import { toast as sonnerToast, ToastT } from 'sonner'
+import { toast as sonnerToast } from 'sonner'
 
 export function toast({ 
   title, 
